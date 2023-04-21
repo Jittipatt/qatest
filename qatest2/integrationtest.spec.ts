@@ -7,7 +7,7 @@ test.use({
 test('test', async ({ page }) => {
   await page.goto('https://www.theguardian.com/international');
   await page.waitForTimeout(5000);
-  await page.frameLocator('iframe[title="The Guardian consent message"]').getByRole('button', { name: 'Yes, I’m happy' }).click();
+  // await page.frameLocator('iframe[title="The Guardian consent message"]').getByRole('button', { name: 'Yes, I’m happy' }).click();
   await page.waitForTimeout(5000);
   await page.locator('#bannerandheader').getByRole('link', { name: 'Sport' }).click();
   await page.waitForTimeout(5000);
